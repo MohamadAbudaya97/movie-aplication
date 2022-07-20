@@ -1,0 +1,63 @@
+
+ Padding(
+              padding: const EdgeInsets.fromLTRB(0, 75, 0, 0),
+              child: Container(
+                width: MediaQuery.of(context).size.width,
+                height: 30,
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Expanded(
+                      child: Center(
+                          child: GestureDetector(
+                        onTap: () => {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => Movie()),
+                          )
+                        },
+                        child: Text(
+                          "افلام",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      )),
+                    ),
+                    Expanded(
+                      child: Center(
+                          child: GestureDetector(
+                        onTap: () => {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => Searess()),
+                          )
+                        },
+                        child: Text("مسلاسلات",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold)),
+                      )),
+                    ),
+                    Expanded(
+                      child: Center(
+                          child: GestureDetector(
+                        onTap: () => {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => Anime()),
+                          )
+                        },
+                        child: Text("انمي",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold)),
+                      )),
+                    ),
+                  ],
+                ),
+              ),
+            )
